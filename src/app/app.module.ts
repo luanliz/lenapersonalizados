@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './components/home/home.component';
 import { SellerAuthComponent } from './components/seller-auth/seller-auth.component';
+import { HomeComponent } from './components/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SellerAuthComponent } from './components/seller-auth/seller-auth.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
