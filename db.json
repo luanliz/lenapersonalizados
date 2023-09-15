@@ -1,0 +1,16 @@
+{
+  "seller": [
+    {
+      "name": "Luanzito",
+      "password": "123",
+      "email": "luanzito@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Lara",
+      "email": "lara@gmail.com",
+      "password": "098776543",
+      "id": 2
+    }
+  ]
+}
