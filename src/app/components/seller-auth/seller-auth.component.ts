@@ -13,7 +13,6 @@ export class SellerAuthComponent implements OnInit {
 
   }
   signUp(data: object) {
-    console.warn(data)
-    this.seller.userSignUp()
+    this.seller.userSignUp(data).subscribe((res) => console.warn(res))
   }
 }
