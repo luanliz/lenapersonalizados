@@ -14,9 +14,18 @@ export class SellerService {
   userSignUp(data: SignUp) {
     return this.http.post('http://localhost:3000/seller', data, { observe: 'response' }).subscribe((result) => {
       this.isSellerLoggedIn.next(true);
+      localStorage.setItem('seller', JSON.stringify(result.body));
       this.router.navigate(['seller-home']);
-      console.warn('resposta', result);
     });
-    return false
+
   }
+
+  reloadServer() {
+    if (localStorage.getItem('seller')) {
+      this.isSellerLoggedIn.next(true);
+      this.router.navigate(['seller-home']);
+    }
+  }
+
+
 }
