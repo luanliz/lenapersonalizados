@@ -9,10 +9,18 @@ import { SellerService } from 'src/app/services/seller.service';
 export class SellerAuthComponent implements OnInit {
   constructor(private seller: SellerService) {
   }
-  ngOnInit() {
+  showLogin = false
 
+  ngOnInit(): void {
+    this.seller.reloadServer()
   }
   signUp(data: object) {
     this.seller.userSignUp(data).subscribe((res) => console.warn(res))
+  }
+  openLogin() {
+    this.showLogin = true
+  }
+  openSignup() {
+    this.showLogin = false
   }
 }
